@@ -1,29 +1,8 @@
 package com.edstem.weekend_assignment_1_aravind;
 
+import java.text.MessageFormat;
+
 public class Card {
-    public enum Rank {
-        ACE,
-        TWO,
-        THREE,
-        FOUR,
-        FIVE,
-        SIX,
-        SEVEN,
-        EIGHT,
-        NINE,
-        TEN,
-        JACK,
-        QUEEN,
-        KING
-    };
-
-    public enum Suite {
-        SPADES,
-        HEARTS,
-        DIAMONDS,
-        CLUBS
-    }
-
     private final Rank rank;
     private final Suite suite;
 
@@ -41,4 +20,8 @@ public class Card {
                 this.rank.ordinal() + 1;
     }
 
+    @Override
+    public String toString() {
+        return MessageFormat.format("[{0}] {1} of {2}", this.getCardPosition(), this.rank, this.suite);
+    }
 }

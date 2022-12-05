@@ -9,8 +9,8 @@ public class Deck {
 
     public Deck() {
         this.cards = new ArrayList<>();
-        for (Card.Suite currentSuite : Card.Suite.values()) {
-            for (Card.Rank currentRank : Card.Rank.values()) {
+        for (Suite currentSuite : Suite.values()) {
+            for (Rank currentRank : Rank.values()) {
                 Card currentCard = new Card(currentRank, currentSuite);
                 this.cards.add(currentCard);
             }
@@ -18,7 +18,7 @@ public class Deck {
     }
 
     public void printDeck() {
-        this.cards.forEach(card -> System.out.println(card.getCard()));
+        this.cards.forEach(System.out::println);
     }
 
     public String getRandomCardFromDeck() {
