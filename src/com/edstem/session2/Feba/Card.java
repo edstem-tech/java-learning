@@ -26,11 +26,11 @@ public class Card {
         switch (rank) {
             case "Ace":
                 return 1;
-            case "King":
+            case "Jack":
                 return 11;
             case "Queen":
                 return 12;
-            case "Jack":
+            case "King":
                 return 13;
             default:
                 return Integer.valueOf(rank);
